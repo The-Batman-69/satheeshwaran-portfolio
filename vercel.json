@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "satheeshwaran-portfolio-backend",
+  "builds": [
+    {
+      "src": "server/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/server.js"
+    }
+  ]
+}
