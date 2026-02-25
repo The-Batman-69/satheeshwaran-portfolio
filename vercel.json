@@ -3,8 +3,14 @@
   "name": "satheeshwaran-portfolio-backend",
   "builds": [
     {
-      "src": "api/*.js",
+      "src": "api/api/*.js",
       "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/api/$1"
     }
   ]
 }
